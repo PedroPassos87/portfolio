@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
-import { Container } from "./styled"
 import { SITE_NAME } from "@/config/app-config"
+import { Container } from "./styled"
 
 export const Header = () =>{
   return <Container>
