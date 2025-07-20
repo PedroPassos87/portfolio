@@ -1,35 +1,26 @@
+import HomePage from "@/containers/HomePage";
+import { getAllArticles } from "@/data/articles/get-all-articles";
 import { ArticleData } from "@/domain/articles";
 import { GetStaticProps } from "next";
 import React from "react";
 
-const API_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
-const getArticles = async (): Promise<ArticleData[]> => {
-  const articles = await fetch(`${API_URL}/api/articles?populate=*`);
-  const jsonArticles = await articles.json();
-  return jsonArticles.data;
-}
 
 export type HomeProps = {
-  articles: ArticleData[];
+  articles: ArticleData [];
 };
 
 export default function Home({ articles }: HomeProps) {
 
   return (
-    <div>
-      {articles.map((article) => (
-        <h2 key={article.slug}>{article.title}</h2>
-      ))}
-    </div>
+    <HomePage articles={articles} />
   );
 };
 
-export const getStaticProps: GetStaticProps = async ()=> {
-  const articles = await getArticles();
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await getAllArticles();
 
   return {
-    props: {articles},
+    props: { articles },
     revalidate: 30,
   };
 };
