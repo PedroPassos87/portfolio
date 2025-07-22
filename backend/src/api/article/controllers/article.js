@@ -6,11 +6,11 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::article.article', {
-  count(ctx) {
-    var { query } = ctx.request
-    return strapi.query('api::article.article').count({ where: query })
+module.exports = createCoreController('api::article.article', ({ strapi }) => ({
+  async count(ctx) {
+    const { query } = ctx.request;
+    const total = await strapi.db.query('api::article.article').count({ where: query });
+    ctx.body = { total };
   }
+}));
 
-
-});

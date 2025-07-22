@@ -12,13 +12,13 @@ export const ArticleCard = ({ slug, title, cover }: ArticleCardProps) => {
   return (
     <Container>
       <ArticleCardCover>
-        <Link href='/api/articles/[slug]' as={`/api/articles/${slug}`}>
+        <Link href='/articles/[slug]' as={`/articles/${slug}`}>
             <img src={cover} alt={title} />
         </Link>
       </ArticleCardCover>
 
       <ArticleCardHeading>
-        <Link href='/api/articles/[slug]' as={`/api/articles/${slug}`}>
+        <Link href='/articles/[slug]' as={`/articles/${slug}`}>
           {title}
         </Link>
 
