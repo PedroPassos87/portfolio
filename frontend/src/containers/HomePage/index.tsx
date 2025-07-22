@@ -4,6 +4,7 @@ import { Container } from "./styles";
 import { Header } from "@/components/Header";
 import { MainContainer } from "@/components/MainContainer";
 import { ArticleCard } from "@/components/ArticleCard";
+import { Footer } from "@/components/Footer";
 
 export type HomePageProps = {
   articles: ArticleData[];
@@ -11,7 +12,7 @@ export type HomePageProps = {
 
 export default function HomePage({ articles }: HomePageProps) {
   return (
-    <>
+    <><>
       <Header />
       <MainContainer>
         <Container>
@@ -25,6 +26,6 @@ export default function HomePage({ articles }: HomePageProps) {
           ))}
         </Container>
       </MainContainer>
-    </>
+    </><Footer /></>
   )
 }
