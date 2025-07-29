@@ -1,134 +1,24 @@
-############################
-# OS X
-############################
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-.Spotlight-V100
-.Trashes
-._*
-
-############################
-# Linux
-############################
-*~
-
-############################
-# Windows
-############################
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.cab
-*.msi
-*.msm
-*.msp
-
-############################
-# Node.js / Yarn / PNPM
-############################
-node_modules
-.pnp
-.pnp.*
-.node_history
-.yarn/*
-!.yarn/cache
-!.yarn/unplugged
-!.yarn/patches
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-############################
-# Tests
-############################
-coverage
-results
-
-############################
-# Logs / Temp / Databases
-############################
-*.log
-*.tmp
-*.pid
-*.sql
-*.sqlite
-*.sqlite3
-
-############################
-# Builds / Packages / Output
-############################
-build
+node_modules
 dist
-exports
-lib-cov
-lcov.info
-out
-.next
-public/uploads/*
-!public/uploads/.gitkeep
+dist-ssr
+*.local
 
-############################
-# Binaries / Executables / Installers
-############################
-*.7z
-*.csv
-*.dat
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.seed
-*.so
-*.swo
-*.swp
-*.swn
-*.swm
-*.out
-
-############################
-# Strapi
-############################
-.env
-.env*
-.strapi
-.strapi-updater.json
-.strapi-cloud.json
-license.txt
-
-############################
-# TypeScript
-############################
-*.tsbuildinfo
-next-env.d.ts
-
-############################
-# ESLint / Lint cache
-############################
-.eslintcache
-
-############################
-# IDE / Editor configs
-############################
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
-nbproject
-
-############################
-# Hosting platforms
-############################
-.vercel
-
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
